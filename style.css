@@ -1,3 +1,18 @@
+
+.theme-light {
+        --color-primary: rgba(8, 8, 144, 0.956);
+        --color-secondary: white;
+        --color-tertiary: rgba(41, 41, 227, 0.956);
+        --mean-color: #575a7b;
+     }
+     
+.theme-dark {
+        --color-primary: white;
+        --color-secondary: rgba(8, 8, 144, 0.956);
+        --color-accent:rgba(41, 41, 227, 0.956) ;
+        --mean-color: #575a7b;
+     }
+
 * {
     padding: 0;
     margin: 0;
@@ -6,11 +21,11 @@
 
 
 body {
-    background-color:rgba(8, 8, 144, 0.956)
+    background-color:var(--color-primary);
 }
 
 .container {
-    background-color: #ffffff;
+    background-color:var(--color-secondary);
     width: 90%;
     position: absolute;
     top:5%;
@@ -25,6 +40,7 @@ body {
 .nav {
     width:100%;
     display: flex;
+    justify-content: space-between;
     height:20vh;
 }
 
@@ -34,18 +50,21 @@ body {
 
 .container .nav p {
     font-family: "Poppins", sans-serif;
-    margin-left: 8vw;
     font-size: 60px;
     align-self: center;
     font-weight:bolder;
-    color:rgba(8, 8, 144, 0.956) ;
+    color:var(--color-primary);
 }
 .search-box {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 10vh;
+    margin-left: 30vw;
     align-items: center;
+    background-color:var(--color-primary) ;
+    width:50%;
+    height: 25%;
     
 }
 .container .search-box .search-head {
@@ -53,89 +72,106 @@ body {
     font-size: 40px;
     align-self: center;
     font-weight:bold;
-    color:rgba(8, 8, 144, 0.956) ;
+    color:var(--color-secondary) ;
 }
 
  .search-box input {
     margin-top: 10px;
     padding: 10px;
-    width: 20%;
+    width: 30%;
     border: none;
     outline: none;
-    border: 3px solid rgba(8, 8, 144, 0.956);
+    border: 3px solid var(--color-primary);
     font-size: 16px;
 }
 
 .search-box input:hover{
-    border: 3px solid rgba(41, 41, 227, 0.956);
+    border: 3px solid var(--color-secondary);
     scale: 105%;
 }
 
 .search-box #search-btn {
     margin-top: 10px;
-    width: 8vw;
-    height: 3vh;
-    color:white ;
-    border-color: rgba(8, 8, 144, 0.956);
+    width: 7vw;
+    height: 4vh;
+    color:var(--color-secondary);
+    border-color:var(--color-secondary);
     font-weight: bold;
-    background-color: rgba(8, 8, 144, 0.956);
+    background-color: var(--color-primary);
     border-radius: 5px;
     cursor: pointer;
 }
 .search-box #search-btn:hover {
-    border: 3px solid rgba(41, 41, 227, 0.956);
+    border: 3px solid var(--color-tertiary)
     scale: 105%;
 }
 
+#switch{
+    width:5vw;
+    height: 3vh;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    cursor: pointer;
+    border: 0;
+    border-radius: 5px;
+}
+#switch:hover {
+    scale: 110%;
+}
 
 .result {
     position: relative;
 }
 .result h3 {
     font-size: 60px;
-    margin-left: 45%;
+    margin-left: 52%;
     margin-right: 5%;
-    color: rgba(8, 8, 144, 0.956);
+    color: var(--color-primary);
 }
 .result .word {
     display: flex;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 .result button {
     background-color: transparent;
-    color: rgba(8, 8, 144, 0.956);
+    color: var(--color-primary);
     border: none;
     outline: none;
     font-size: 40px;
     margin-right: auto;
 }
 .result button:hover{
-    color: rgba(41, 41, 227, 0.956);
+    color: var(--color-tertiary);
     scale: 105%;
     cursor: pointer;
 }
 .result .details {
     display: flex;
     gap: 10px;
-    color: #b3b6d4;
+    color: var(--color-primary);
     justify-content: center;
     font-size: 50px;
     margin-top: 10px;
+    margin-left: 20%;
 }
 .word-meaning {
-    color: #575a7b;
+    color: var(--mean-color);
     text-align: center;
     margin-top: 20px;
     font-size: 25px;
-   
+    margin-left: 20%;
 }
 .word-example {
-    color: #575a7b;
+    color: var(--mean-color);
     font-style: italic;
-    border-left: 5px solid #ae9cff;
     text-align: center;
+    
 }
 .error {
-    padding-top: 50px;
+    color:var(--color-primary);
+    font-size: 50px;
+    font-weight: bolder;
     text-align: center;
+    margin-top: 5vw;
+    margin-left: 15vw;
 }
