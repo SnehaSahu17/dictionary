@@ -105,8 +105,8 @@ body {
 }
 
 #switch{
-    width:5vw;
-    height: 3vh;
+    width:50px;
+    height: 30px;
     background-color: var(--color-primary);
     color: var(--color-secondary);
     cursor: pointer;
@@ -128,7 +128,7 @@ body {
 }
 .result .word {
     display: flex;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 .result button {
     background-color: transparent;
@@ -155,7 +155,7 @@ body {
 .word-meaning {
     color: var(--color-primary);
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 25px;
     margin-left: 20%;
 }
@@ -163,7 +163,8 @@ body {
     color: var(--color-primary);
     font-style: italic;
     text-align: center;
-    
+    margin-top: 10px;
+    margin-left: 20%;
 }
 .error {
     color:var(--color-primary);
@@ -172,4 +173,17 @@ body {
     text-align: center;
     margin-top: 5vw;
     margin-left: 15vw;
+}
+
+@media screen and (max-width:815px) {
+
+    .container .nav p {
+        margin-left: 80px;
+    }
+
+    .search-box {
+        margin-left: 20vw;
+        width:70%;
+       
+    }
 }
