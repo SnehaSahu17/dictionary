@@ -2,15 +2,13 @@
 .theme-light {
         --color-primary: rgba(8, 8, 144, 0.956);
         --color-secondary: white;
-        --color-tertiary: rgba(41, 41, 227, 0.956);
-        --mean-color: #575a7b;
+        --color-tertiary: rgba(41, 41, 227, 0.956);    
      }
      
 .theme-dark {
         --color-primary: white;
         --color-secondary: rgba(8, 8, 144, 0.956);
         --color-accent:rgba(41, 41, 227, 0.956) ;
-        --mean-color: #575a7b;
      }
 
 * {
@@ -56,7 +54,6 @@ body {
     color:var(--color-primary);
 }
 .search-box {
-    width: 100%;
     display: flex;
     flex-direction: column;
     margin-top: 10vh;
@@ -64,8 +61,8 @@ body {
     align-items: center;
     background-color:var(--color-primary) ;
     width:50%;
-    height: 25%;
-    
+    height: 30%;
+    border-radius: 20px;
 }
 .container .search-box .search-head {
     font-family: "Poppins", sans-serif;
@@ -76,22 +73,23 @@ body {
 }
 
  .search-box input {
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 10px;
-    width: 30%;
-    border: none;
+    width: 40%;
     outline: none;
-    border: 3px solid var(--color-primary);
+    border: 3px solid var(--color-secondary);
+    border-radius: 5px;
     font-size: 16px;
 }
 
 .search-box input:hover{
-    border: 3px solid var(--color-secondary);
+    border: 3px solid var(--color-primary);
     scale: 105%;
 }
 
 .search-box #search-btn {
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
     width: 7vw;
     height: 4vh;
     color:var(--color-secondary);
@@ -155,14 +153,14 @@ body {
     margin-left: 20%;
 }
 .word-meaning {
-    color: var(--mean-color);
+    color: var(--color-primary);
     text-align: center;
     margin-top: 20px;
     font-size: 25px;
     margin-left: 20%;
 }
 .word-example {
-    color: var(--mean-color);
+    color: var(--color-primary);
     font-style: italic;
     text-align: center;
     
